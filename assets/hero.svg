@@ -1,14 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" role="img" aria-label="qwen36-uncensored">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-label="qwen36-uncensored">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#8B7CF6"/>
-      <stop offset="1" stop-color="#3D2E8A"/>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8B7CF6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8B7CF6" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="280" fill="#0D1117"/>
-  <circle cx="980" cy="40" r="220" fill="#8B7CF6" opacity="0.08"/>
-  <text x="64" y="120" fill="#C9D1D9" font-family="ui-monospace,Consolas,monospace" font-size="36" font-weight="700">qwen3.6:27b-uncensored</text>
-  <text x="64" y="168" fill="#8B7CF6" font-family="ui-monospace,Consolas,monospace" font-size="18">17 GB Q4_K_M · think-off cheap path · harvested SYSTEM pack</text>
-  <text x="64" y="210" fill="#7D8590" font-family="ui-monospace,Consolas,monospace" font-size="14">weights stay in the official Ollama library  this repo bakes the residual</text>
-  <rect x="0" y="0" width="8" height="280" fill="url(#g)"/>
+  <rect width="1200" height="320" fill="#0D1117"/>
+  <circle cx="1040" cy="-20" r="260" fill="url(#glow)"/>
+  <rect x="0" y="0" width="10" height="320" fill="url(#bar)"/>
+  <text x="48" y="72" fill="#8B7CF6" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="15" letter-spacing="3">LOCAL 27B  ·  Q4_K_M  ·  FULLY UNCENSORED</text>
+  <text x="48" y="132" fill="#F0F6FC" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="42" font-weight="700">qwen3.6:27b-uncensored</text>
+  <text x="48" y="178" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="18">Official Qwen 3.6 27B weights  +  harvested SYSTEM pack</text>
+  <rect x="48" y="214" width="268" height="42" rx="8" fill="#FFD21E"/>
+  <text x="182" y="241" text-anchor="middle" fill="#0D1117" font-family="ui-monospace,Consolas,monospace" font-size="15" font-weight="700">Qwen3.6-27B-Q4_K_M.gguf</text>
+  <rect x="328" y="214" width="148" height="42" rx="8" fill="#161B22" stroke="#30363D"/>
+  <text x="402" y="241" text-anchor="middle" fill="#C9D1D9" font-family="ui-monospace,Consolas,monospace" font-size="15">16.8 GB</text>
+  <rect x="488" y="214" width="168" height="42" rx="8" fill="#161B22" stroke="#30363D"/>
+  <text x="572" y="241" text-anchor="middle" fill="#C9D1D9" font-family="ui-monospace,Consolas,monospace" font-size="15">~43 tok/s</text>
+  <rect x="668" y="214" width="188" height="42" rx="8" fill="#161B22" stroke="#30363D"/>
+  <text x="762" y="241" text-anchor="middle" fill="#C9D1D9" font-family="ui-monospace,Consolas,monospace" font-size="15">24 GB VRAM</text>
+  <text x="48" y="292" fill="#6E7681" font-family="ui-monospace,Consolas,monospace" font-size="13">huggingface.co/unsloth/Qwen3.6-27B-GGUF   |   GitHub cannot host the 17 GB file</text>
 </svg>

@@ -1,7 +1,8 @@
 {
   "name": "qwen36-uncensored",
   "version": "1.0.0",
-  "description": "Local Qwen 3.6 27B Q4_K_M (~17 GB) with a harvested uncensored attribute pack. Pull official Ollama weights, bake the SYSTEM, run think-off by default.",
+  "description": "Local Qwen 3.6 27B Q4_K_M (~16.8 GB) with a harvested uncensored attribute pack. Download Unsloth GGUF or pull Ollama, bake SYSTEM, run think-off.",
+  "homepage": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF/blob/main/Qwen3.6-27B-Q4_K_M.gguf",
   "license": "MIT",
   "type": "commonjs",
   "bin": {

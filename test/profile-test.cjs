@@ -15,5 +15,8 @@ assert.ok(/PARAMETER num_ctx 8192/.test(mf));
 assert.ok(/PARAMETER num_gpu 99/.test(mf));
 assert.ok(profile.assertLocalSystem(mf).ok);
 assert.ok(!/PARAMETER think/.test(mf));
+assert.strictEqual(profile.WEIGHTS.ggufName, 'Qwen3.6-27B-Q4_K_M.gguf');
+assert.ok(profile.WEIGHTS.q4kmFile.indexOf('unsloth/Qwen3.6-27B-GGUF') >= 0);
+assert.ok(profile.WEIGHTS.q4kmDownload.indexOf('Qwen3.6-27B-Q4_K_M.gguf') >= 0);
 
-console.log('ok ' + profile.DISTINCTIVE.length + ' distinctive clauses + Modelfile');
+console.log('ok ' + profile.DISTINCTIVE.length + ' distinctive clauses + Modelfile + HF Q4_K_M');
