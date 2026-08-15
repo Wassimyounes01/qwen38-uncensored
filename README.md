@@ -30,10 +30,6 @@
 <img src="https://img.shields.io/badge/think-off%20by%20default-8B7CF6?style=flat-square" alt="think off">
 </p>
 
-<p align="center">
-  <img src="assets/product.svg" alt="install: Hugging Face Q4_K_M or ollama pull, then bake SYSTEM" width="100%">
-</p>
-
 ---
 
 ## Download the model
