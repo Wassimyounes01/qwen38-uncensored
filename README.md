@@ -4,10 +4,6 @@
   <img src="assets/dragon.png" alt="qwen36-uncensored" width="100%">
 </p>
 
-<p align="center">
-  <img src="assets/hero.svg" alt="qwen36-uncensored" width="100%">
-</p>
-
 <h1 align="center">Qwen 3.6 27B Uncensored</h1>
 
 <p align="center">
