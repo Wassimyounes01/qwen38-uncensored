@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/hero.svg" alt="qwen36-uncensored — Qwen 3.6 27B Q4_K_M, fully uncensored" width="100%">
+  <img src="assets/hero.svg" alt="qwen36-uncensored" width="100%">
 </p>
 
 <h1 align="center">Qwen 3.6 27B Uncensored</h1>
