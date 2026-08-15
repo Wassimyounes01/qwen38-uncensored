@@ -1,0 +1,30 @@
+{
+  "name": "qwen36-uncensored",
+  "version": "1.0.0",
+  "description": "Local Qwen 3.6 27B Q4_K_M (~17 GB) with a harvested uncensored attribute pack. Pull official Ollama weights, bake the SYSTEM, run think-off by default.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "qwen36-uncensored": "bin/install.cjs"
+  },
+  "scripts": {
+    "install-model": "node bin/install.cjs",
+    "chat": "node examples/chat.cjs",
+    "check": "node --check lib/profile.cjs && node --check bin/install.cjs && node --check examples/chat.cjs && node test/profile-test.cjs",
+    "test": "node test/profile-test.cjs"
+  },
+  "keywords": [
+    "qwen",
+    "qwen3.6",
+    "ollama",
+    "uncensored",
+    "local-llm",
+    "27b",
+    "q4-k-m"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

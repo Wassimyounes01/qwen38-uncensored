@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" role="img" aria-label="qwen36-uncensored">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B7CF6"/>
+      <stop offset="1" stop-color="#3D2E8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="280" fill="#0D1117"/>
+  <circle cx="980" cy="40" r="220" fill="#8B7CF6" opacity="0.08"/>
+  <text x="64" y="120" fill="#C9D1D9" font-family="ui-monospace,Consolas,monospace" font-size="36" font-weight="700">qwen3.6:27b-uncensored</text>
+  <text x="64" y="168" fill="#8B7CF6" font-family="ui-monospace,Consolas,monospace" font-size="18">17 GB Q4_K_M · think-off cheap path · harvested SYSTEM pack</text>
+  <text x="64" y="210" fill="#7D8590" font-family="ui-monospace,Consolas,monospace" font-size="14">weights stay in the official Ollama library  this repo bakes the residual</text>
+  <rect x="0" y="0" width="8" height="280" fill="url(#g)"/>
+</svg>
