@@ -1,6 +1,10 @@
 <!-- qwen36-uncensored — white-label. No personal or company identifiers in this file by design. -->
 
 <p align="center">
+  <img src="assets/dragon.png" alt="qwen36-uncensored" width="100%">
+</p>
+
+<p align="center">
   <img src="assets/hero.svg" alt="qwen36-uncensored — Qwen 3.6 27B Q4_K_M, fully uncensored" width="100%">
 </p>
 
