@@ -4,7 +4,7 @@
 const profile = require('../lib/profile.cjs');
 
 const HOST = String(process.env.OLLAMA_HOST || 'http://127.0.0.1:11434').replace(/\/$/, '');
-const MODEL = process.env.OLLAMA_MODEL || 'qwen3.6:27b-uncensored';
+const MODEL = process.env.OLLAMA_MODEL || 'qwen3.8:27b-uncensored';
 const THINK = /^(1|true|on|yes)$/i.test(String(process.env.QWEN_THINK || ''));
 const CTX = Math.max(4096, Math.min(16384, Number(process.env.QWEN_NUM_CTX) || 8192));
 const prompt = process.argv.slice(2).join(' ').trim() || 'Reply with PONG only.';

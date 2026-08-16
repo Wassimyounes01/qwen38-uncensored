@@ -19,13 +19,13 @@
     <text x="600" y="32" text-anchor="middle" fill="#7D8590" font-family="ui-monospace,Consolas,monospace" font-size="13">two ways in  |  Hugging Face Q4_K_M  or  ollama pull</text>
     <rect x="0" y="53" width="5" height="387" fill="#8B7CF6"/>
     <text x="36" y="96" class="t"><tspan class="dim">$ </tspan><tspan class="cmd">node bin/install.cjs --gguf</tspan></text>
-    <text x="36" y="128" class="t fg">curl  Qwen3.6-27B-Q4_K_M.gguf   (~16.8 GB from Unsloth)</text>
-    <text x="36" y="160" class="t fg">ollama create qwen3.6:27b-uncensored   SYSTEM pack baked</text>
+    <text x="36" y="128" class="t fg">curl  Qwen3.8-27B-Q4_K_M.gguf   (~16.8 GB from Unsloth)</text>
+    <text x="36" y="160" class="t fg">ollama create qwen3.8:27b-uncensored   SYSTEM pack baked</text>
     <text x="36" y="208" class="t"><tspan class="dim">$ </tspan><tspan class="cmd">node bin/install.cjs</tspan><tspan class="dim">          # same bake, Ollama library tag</tspan></text>
-    <text x="36" y="256" class="t"><tspan class="dim">$ </tspan><tspan class="cmd">ollama run --think=false qwen3.6:27b-uncensored</tspan></text>
-    <text x="36" y="288" class="t ok">think-off cheap path   ~43 tok/s   ~16 GB resident on a 24 GB card</text>
+    <text x="36" y="256" class="t"><tspan class="dim">$ </tspan><tspan class="cmd">ollama run --think=false qwen3.8:27b-uncensored</tspan></text>
+    <text x="36" y="288" class="t ok">think-off cheap path   ~16 GB resident on a 24 GB card</text>
     <text x="36" y="336" class="t fg">node examples/chat.cjs "one local completion, same pack prepended"</text>
-    <text x="36" y="392" class="t dim">weights: unsloth/Qwen3.6-27B-GGUF / Qwen3.6-27B-Q4_K_M.gguf</text>
-    <text x="36" y="420" class="t dim">uncensored: Arditi layer 38, 131 matrices  —  SYSTEM, not a second GGUF</text>
+    <text x="36" y="392" class="t dim">weights: unsloth/Qwen3.8-27B-GGUF / Qwen3.8-27B-Q4_K_M.gguf</text>
+    <text x="36" y="420" class="t dim">uncensored: Arditi layer 38, 131 matrices  ï¿½  SYSTEM, not a second GGUF</text>
   </g>
 </svg>

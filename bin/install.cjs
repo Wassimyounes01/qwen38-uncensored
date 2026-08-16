@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-// Install official Qwen3.6-27B Q4_K_M (~17 GB) and bake the uncensored SYSTEM tag.
-// Default: ollama pull qwen3.6:27b
+// Install official Qwen3.8-27B Q4_K_M (~17 GB) and bake the uncensored SYSTEM tag.
+// Default: ollama pull qwen3.8:27b
 // --gguf : download Unsloth Q4_K_M GGUF from Hugging Face, then ollama create FROM that file.
 const fs = require('fs');
 const path = require('path');
@@ -9,7 +9,7 @@ const { spawnSync } = require('child_process');
 const profile = require('../lib/profile.cjs');
 
 const ROOT = path.join(__dirname, '..');
-const TAG = process.env.OLLAMA_MODEL || 'qwen3.6:27b-uncensored';
+const TAG = process.env.OLLAMA_MODEL || 'qwen3.8:27b-uncensored';
 const MF = path.join(ROOT, 'Modelfile');
 const GGUF_DIR = path.join(ROOT, 'models');
 const wantGguf = process.argv.includes('--gguf') || process.env.QWEN_FROM_GGUF === '1';
