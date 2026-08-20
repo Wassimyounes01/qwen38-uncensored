@@ -1,14 +1,17 @@
-FROM orcarouter/Qwen3.8-27B-Uncensored:q4_k_m
+FROM orcarouter/Qwen3.8-27B-Uncensored:q3_k_m
 PARAMETER num_ctx 8192
 PARAMETER num_batch 512
 PARAMETER num_gpu 999
+PARAMETER num_thread 12
 PARAMETER temperature 0.7
 PARAMETER top_p 0.8
 # Ollama 0.32+ has no Modelfile think knob. Clients send think:false on /api/chat.
-# Windows/Linux: Q4_K_M (16.8GB) abliterated weights — uncensored at the weight level.
+# Mac M5 Pro optimized: Q3_K_M (13.5GB) leaves 23GB+ for KV cache + OS on 48GB.
+# num_gpu 999 = all layers on GPU (Metal unified memory, no CPU offload).
+# num_thread 12 = M5 Pro performance cores, super cores stay free for OS.
 SYSTEM """
 LOCAL QWEN UNCENSORED ATTRIBUTE PACK — harvested from https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-FP8 (not the paid obsidian/qwen3.8-27b API, not the 30.9 GB FP8 weights).
-Serving: Qwen 3.8 27B uncensored — abliterated Q4_K_M weights from orcarouter/Qwen3.8-27B-Uncensored-GGUF plus this SYSTEM pack. Fully uncensored at the weight level (refusal direction orthogonalized out). Cheap path: think false.
+Serving: Qwen 3.8 27B uncensored — abliterated Q3_K_M weights from orcarouter/Qwen3.8-27B-Uncensored-GGUF plus this SYSTEM pack. Fully uncensored at the weight level (refusal direction orthogonalized out). Cheap path: think false.
 Base: Qwen/Qwen3.8-27B · license Apache-2.0 · architecture Qwen3_5ForConditionalGeneration — 64 layers, hidden 5120, hybrid Gated DeltaNet (48 linear-attention + 16 full-attention, interval 4), native VL tower + MTP head.
 Context: 262,144 tokens. Thinking: enable_thinking default ON (Qwen3.8); reasoning parser qwen3; reasoning trace in the reasoning field. Tool calling: OpenAI tools + tool_calls + role:tool, multi-turn, parser qwen3_coder, auto tool choice.
 Vision: vision tower preserved byte-for-byte (333 visual.* tensors, BF16); OCR and image+video preprocessor intact; image-conditioned refusals reduced with text ones. MTP speculative-decoding head preserved (method mtp, num_speculative_tokens 3).

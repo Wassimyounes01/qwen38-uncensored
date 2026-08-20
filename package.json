@@ -1,8 +1,8 @@
 {
   "name": "qwen38-uncensored",
-  "version": "1.1.0",
-  "description": "Local Qwen 3.8 27B uncensored Q4_K_M (~16.8 GB) with a harvested uncensored attribute pack. Download Unsloth GGUF or pull Ollama, bake SYSTEM, run think-off.",
-  "homepage": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/blob/main/Qwen3.8-27B-Q4_K_M.gguf",
+  "version": "2.0.0",
+  "description": "Abliterated Qwen 3.8 27B uncensored — cross-platform (Mac M5 Pro Q3_K_M 13.5GB + Windows Q4_K_M 16.8GB) with optional MLX fast path. Truly uncensored at the weight level.",
+  "homepage": "https://huggingface.co/orcarouter/Qwen3.8-27B-Uncensored-GGUF",
   "license": "MIT",
   "type": "commonjs",
   "bin": {
@@ -10,18 +10,24 @@
   },
   "scripts": {
     "install-model": "node bin/install.cjs",
+    "install-mac": "node bin/install.cjs",
+    "install-mlx": "bash bin/install-mlx.sh",
     "chat": "node examples/chat.cjs",
-    "check": "node --check lib/profile.cjs && node --check bin/install.cjs && node --check examples/chat.cjs && node test/profile-test.cjs",
+    "check": "node --check lib/profile.cjs && node --check lib/platform.cjs && node --check bin/install.cjs && node --check examples/chat.cjs && node test/profile-test.cjs",
     "test": "node test/profile-test.cjs"
   },
   "keywords": [
     "qwen",
     "qwen3.8",
     "uncensored",
+    "abliterated",
     "ollama",
+    "mlx",
     "local-llm",
     "27b",
-    "q4-k-m"
+    "apple-silicon",
+    "m5-pro",
+    "cross-platform"
   ],
   "engines": {
     "node": ">=18"
