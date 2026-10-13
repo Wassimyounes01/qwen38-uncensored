@@ -148,7 +148,10 @@ if (wantGguf) {
     console.log('Using existing ' + dest);
   } else {
     console.log('Downloading ' + quantLabel + ' GGUF (~' + sizeGB + ' GB)...');
-    run('curl', ['-L', '--fail', '--retry', '3', '-o', dest, ggufUrl]);
+    // Resume partial downloads (-C -) into a .part file so an interrupted multi-GB
+    // transfer is neither restarted nor mistaken for a complete model.
+    run('curl', ['-L', '--fail', '--retry', '3', '-C', '-', '-o', dest + '.part', ggufUrl]);
+    fs.renameSync(dest + '.part', dest);
   }
   from = dest;
 } else {
